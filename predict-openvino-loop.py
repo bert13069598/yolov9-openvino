@@ -73,7 +73,7 @@ class YOLOv9_OPENVINO:
         ov_model = core.read_model(OV_MODEL_PATH)
         ov_config = {}
         if DEVICE != "CPU":
-            ov_model.reshape({0: [batch, 3, 1024, 1024]})
+            ov_model.reshape({0: [batch, 3, 640, 640]})
         if DEVICE == "GPU":
             ov_config = {"GPU_DISABLE_WINOGRAD_CONVOLUTION": "YES"}
 

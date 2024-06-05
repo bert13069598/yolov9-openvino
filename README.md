@@ -1,5 +1,6 @@
 ## yolov9-openvino
 ### export
+export at yolov9 repo
 ```bash
 python export.py
 ```
